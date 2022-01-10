@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/">
+    <Resource name="dataSource/mysql/prod"
+              auth="Container"
+              type="javax.sql.DataSource"
+              driverClassName="com.mysql.cj.jdbc.Driver"
+              url="jdbc:mysql://localhost:3306/javaweb?useSSL=false&amp;characterEncoding=utf8&amp;serverTimezone=US/Eastern"
+              username="root" password="password"
+              maxTotal="20" maxIdle="10"
+              maxWaitMillis="10000" />
+</Context>

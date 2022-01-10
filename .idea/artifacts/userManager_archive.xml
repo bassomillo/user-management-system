@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="userManager archive">
+    <output-path>$PROJECT_DIR$/out/artifacts/userManager_archive</output-path>
+    <root id="archive" name="userManager archive.war">
+      <element id="artifact" artifact-name="userManager" />
+    </root>
+  </artifact>
+</component>
