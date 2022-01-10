@@ -23,6 +23,7 @@
 <body>
 <h1>
     operate success
+    <a href="login.jsp">go to login</a>
 </h1>
 </body>
 </html>

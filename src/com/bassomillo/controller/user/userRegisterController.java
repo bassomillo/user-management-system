@@ -35,9 +35,11 @@ public class userRegisterController extends HttpServlet {
         }
         if(profile == null || inputStream == null){
             try {
-                resp.sendRedirect(req.getContextPath()+"/pages/error.jsp");
+                req.getRequestDispatcher("/pages/error.jsp").forward(req,resp);
             } catch (IOException ex) {
                 ex.printStackTrace();
+            } catch (ServletException e) {
+                e.printStackTrace();
             }
         }
         User user = new User();
@@ -48,13 +50,17 @@ public class userRegisterController extends HttpServlet {
         user.setProfile(Constant.BASE_URL_PATH+username + "/"+fileName);
         try{
             userservice.register(user);
-            resp.sendRedirect(req.getContextPath()+"/WEB-INF/successPages/success.jsp");
+            req.getRequestDispatcher("/WEB-INF/successPages/success.jsp").forward(req,resp);
         }catch (UserIsExistException | IOException e){
             try {
-                resp.sendRedirect(req.getContextPath()+"/WEB-INF/errorPages/error.jsp");
+                req.getRequestDispatcher("/WEB-INF/errorPages/error.jsp").forward(req,resp);
             } catch (IOException ex) {
                 ex.printStackTrace();
+            } catch (ServletException ex) {
+                ex.printStackTrace();
             }
+        } catch (ServletException e) {
+            e.printStackTrace();
         }
         File file = new File(dir);
         if(!file.exists()){
