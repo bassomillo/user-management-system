@@ -35,7 +35,7 @@ public class userRegisterController extends HttpServlet {
         }
         if(profile == null || inputStream == null){
             try {
-                req.getRequestDispatcher("/pages/error.jsp").forward(req,resp);
+                req.getRequestDispatcher("/WEB-INF/errorPages/errorNoProfile.jsp").forward(req,resp);
             } catch (IOException ex) {
                 ex.printStackTrace();
             } catch (ServletException e) {

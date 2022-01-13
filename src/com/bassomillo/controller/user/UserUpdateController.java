@@ -55,7 +55,7 @@ public class UserUpdateController extends HttpServlet {
         }
         if(profile == null || inputStream == null){
             try {
-                resp.sendRedirect(req.getContextPath()+"/pages/error.jsp");
+                req.getRequestDispatcher("/WEB-INF/errorPages/errorNoProfile.jsp").forward(req,resp);
             } catch (IOException ex) {
                 ex.printStackTrace();
             }
@@ -71,10 +71,10 @@ public class UserUpdateController extends HttpServlet {
 
         try {
             Integer rows = userService.update(user);
-            resp.sendRedirect(req.getContextPath()+"/pages/success.jsp");
+            req.getRequestDispatcher("/WEB-INF/successPages/operateSuccess.jsp").forward(req,resp);
         }catch (Exception e){
             try {
-                resp.sendRedirect(req.getContextPath()+"/pages/error.jsp");
+                req.getRequestDispatcher("/WEB-INF/errorPages/error.jsp").forward(req,resp);
             } catch (IOException ex) {
                 ex.printStackTrace();
             }

@@ -22,7 +22,7 @@
 </head>
 <body>
 <h1>
-    operate failed
+    Operate failed. You must add the profile.
     <a href="user">roll back</a>
 </h1>
 </body>

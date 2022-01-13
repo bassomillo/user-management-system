@@ -1,7 +1,7 @@
 <%--
   User: bassomillo
   Date: 2021/12/30
-  Time: 18:34
+  Time: 18:33
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
@@ -13,7 +13,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>operate failed</title>
+    <title>operate success</title>
     <base href="<%=basePath%>">
     <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
@@ -22,7 +22,7 @@
 </head>
 <body>
 <h1>
-    operate failed
+    operate success
     <a href="user">roll back</a>
 </h1>
 </body>
